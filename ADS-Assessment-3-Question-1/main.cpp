@@ -18,11 +18,23 @@ void main()
 {
 	//Declaration of Variables
 	int firstLineVariable;
+	int secondLineVariable;
 
 	//Reads in textfile and stores information into Variables
 	ifstream readFile;
 	readFile.open("input-q1a2.txt");
 	readFile >> firstLineVariable;
+	readFile >> secondLineVariable;
+
+
+	//Writes the result to a text file
+	ofstream  writeFile;
+	writeFile.open("output-a1q1.txt");
+	writeFile << " ";
+	cout << endl;
+	writeFile.close();
+
+
 
 
 
