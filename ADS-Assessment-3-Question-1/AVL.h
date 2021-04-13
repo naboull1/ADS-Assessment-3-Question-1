@@ -5,6 +5,7 @@
 class AVL :
     public BST
 {
+public:
     bool displayRotations = true;
     int height(numbersClass* node);
     int difference(numbersClass* node);

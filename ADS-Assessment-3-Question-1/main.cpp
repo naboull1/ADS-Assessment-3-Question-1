@@ -54,7 +54,7 @@ void main()
 	cout << "AVL" << endl;
 	cout << "===" << endl;
 	AVL avl1;
-	/*avl1.displayRotations = true;
+	avl1.displayRotations = true;
 	avl1.insert(new numbersClass(2333, "Jeff"));
 	avl1.insert(new numbersClass(2222, "Bill"));
 	avl1.insert(new numbersClass(1221, "Trevor"));
@@ -63,19 +63,19 @@ void main()
 	avl1.insert(new numbersClass(3333, "Adam"));
 	avl1.insert(new numbersClass(6666, "Bridge"));
 	avl1.insert(new numbersClass(7777, "Bam"));
-	avl1.insert(new numbersClass(4343, "Bucket"));*/
-	/*cout << "AVL ROOT : " << avl1.root->name << " " << avl1.root->numberID << endl;
+	avl1.insert(new numbersClass(4343, "Bucket"));
+	cout << "AVL ROOT : " << avl1.root->name << " " << avl1.root->numberID << endl;
 	cout << "Students AVL inorder traversal" << endl;
 	cout << "==============================" << endl;
-	avl1.inOrderTraversal(avl1.root);*/
+	avl1.inOrderTraversal(avl1.root);
 
 
-	/*cout << "try find student matching id 4343..." << endl;
+	cout << "try find student matching id 4343..." << endl;
 	numbersClass* sPtr2 = avl1.search(4343, true);
 	if (sPtr2 != NULL)
 		cout << "Found " << sPtr2->name << " with id 4343" << endl;
 	else
-		cout << "Cannot find id 4343 in avl1 tree" << endl;*/
+		cout << "Cannot find id 4343 in avl1 tree" << endl;
 
 	system("pause");
 
