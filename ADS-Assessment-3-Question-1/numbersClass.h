@@ -14,6 +14,5 @@ class numbersClass
 		numbersClass* rightChild;
 
 		numbersClass(int numberID, string name);
-
 };
 
