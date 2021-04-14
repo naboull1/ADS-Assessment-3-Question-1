@@ -5,11 +5,12 @@
 using namespace std;
 
 class Graph {
+public:
 	int numVertices;
 	list<int>* adjLists;
 	bool* visited;
 
-public:
+
 	Graph(int vertices);
 	void addEdge(int src, int dest);
 	void BFS(int startVertex);

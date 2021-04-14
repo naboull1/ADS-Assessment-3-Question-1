@@ -11,10 +11,72 @@
 #include <ctime>
 #include "BST.h"
 #include "AVL.h"
-#include "BFT.h"
+//#include "BFT.h"
+#include <map>
+#include<queue>
+#include<list>
 
 
 using namespace std;
+
+
+template<typename T>
+class Graph {
+
+	map<T, list<T> > adjList;
+
+public:
+	Graph() {
+
+	}
+	void addEdge(T u, T v, bool bidir = true) {
+
+		adjList[u].push_back(v);
+		if (bidir) {
+			adjList[v].push_back(u);
+		}
+	}
+
+	void print() {
+
+		//Iterate over the map
+		for (auto i : adjList) {
+			cout << i.first << "->";
+
+			//i.second is LL
+			for (T entry : i.second) {
+				cout << entry << ",";
+			}
+			cout << endl;
+		}
+	}
+
+	void bfs(T src) {
+
+		queue<T> q;
+		map<T, bool> visited;
+
+		q.push(src);
+		visited[src] = true;
+
+		while (!q.empty()) {
+
+			T node = q.front();
+			cout << node << " ";
+			q.pop();
+
+			// For the neigbours of the current node, find out the nodes which are not visited
+			for (int neigbour : adjList[node]) {
+				if (!visited[neigbour]) {
+					q.push(neigbour);
+					visited[neigbour] = true;
+				}
+			}
+		}
+	}
+};
+
+
 
 
 //Main Master Code
@@ -81,16 +143,35 @@ void main()
 
 
 
-	Graph g(4);
-	g.addEdge(0, 1);
-	g.addEdge(0, 2);
-	g.addEdge(1, 2);
-	g.addEdge(2, 0);
-	g.addEdge(2, 3);
-	g.addEdge(3, 3);
 
-	g.BFS(2);
 
+	//Graph g(4);
+ // g.addEdge(0, 1);
+ // g.addEdge(0, 2);
+ // g.addEdge(1, 2);
+ // g.addEdge(2, 0);
+ // g.addEdge(2, 3);
+ // g.addEdge(3, 3);
+
+ // g.BFS(2);
+
+
+
+
+
+	Graph<int> g;
+
+
+	g.addEdge(5, 8);
+	g.addEdge(8, 10);
+	g.addEdge(10, 11);
+	g.addEdge(11, 12);
+	g.addEdge(12, 17);
+	g.addEdge(17, 21);
+	g.addEdge(21, 23);
+	g.addEdge(23, 8);
+
+	g.bfs(5);
 
 
 	system("pause");
