@@ -13,6 +13,5 @@ class BST
 		void inOrderTraversal(numbersClass* current);
 		void preOrderTraversal(numbersClass* current);
 		void postOrderTraversal(numbersClass* current);
-
 };
 
