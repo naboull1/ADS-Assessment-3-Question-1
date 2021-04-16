@@ -9,10 +9,9 @@ class numbersClass
 {
 	public:
 		int numberID;
-		string name;
 		numbersClass* leftChild;
 		numbersClass* rightChild;
 
-		numbersClass(int numberID, string name);
+		numbersClass(int numberID);
 };
 

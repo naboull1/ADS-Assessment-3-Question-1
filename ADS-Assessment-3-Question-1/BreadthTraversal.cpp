@@ -64,7 +64,7 @@ numbersClass* BreadthTraversal::search(int numberID, bool showSearchPath)
 
 
         if (showSearchPath)
-            cout << current->numberID << " " << current->name << endl;
+            cout << current->numberID << " " << endl;
 
         //havent found it yet, lefts explore left or right down in the tree
         if (numberID < current->numberID)
@@ -115,7 +115,7 @@ void BreadthTraversal::show(numbersClass* p)
             cout << node.level << "- ";
             previousOutputLevel = node.level;
         }
-        cout << node.number->numberID << ":" << node.number->name << " ";
+        cout << node.number->numberID  << " ";
         q.pop();
 
         /* Enqueue left child */
