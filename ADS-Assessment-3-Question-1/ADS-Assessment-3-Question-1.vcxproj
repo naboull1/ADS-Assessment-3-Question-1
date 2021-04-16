@@ -139,16 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AVL.cpp" />
-    <ClCompile Include="BFT.cpp" />
-    <ClCompile Include="BST.cpp" />
+    <ClCompile Include="BreadthTraversal.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="numbersClass.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AVL.h" />
-    <ClInclude Include="BFT.h" />
-    <ClInclude Include="BST.h" />
+    <ClInclude Include="BreadthTraversal.h" />
     <ClInclude Include="numbersClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
