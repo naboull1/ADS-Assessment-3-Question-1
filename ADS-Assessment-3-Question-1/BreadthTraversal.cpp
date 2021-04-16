@@ -1,3 +1,5 @@
+#include <windows.h>								//Library for controling windows functions
+#include <fstream>									//Library for File System control
 #include "BreadthTraversal.h"
 
 
@@ -94,6 +96,10 @@ numbersClass* BreadthTraversal::search(int numberID, bool showSearchPath)
 //referenced second algorithm here https://www.geeksforgeeks.org/level-order-tree-traversal/
 void BreadthTraversal::show(numbersClass* p)
 {
+    //Writes the result to a text file
+    ofstream  writeFile;
+    writeFile.open("output-a1q1.txt");
+
     // Base Case 
     if (root == NULL)  return;
 
@@ -105,6 +111,7 @@ void BreadthTraversal::show(numbersClass* p)
 
     int previousOutputLevel = -1;
 
+
     while (q.empty() == false)
     {
         // Print front of queue and remove it from queue 
@@ -112,10 +119,14 @@ void BreadthTraversal::show(numbersClass* p)
         if (node.level != previousOutputLevel)
         {
             cout << endl;
+            writeFile << endl;
             cout << node.level << "- ";
+            writeFile << node.level << "- ";
+            
             previousOutputLevel = node.level;
         }
         cout << node.number->numberID  << " ";
+        writeFile << node.number->numberID << " ";
         q.pop();
 
         /* Enqueue left child */
@@ -127,4 +138,5 @@ void BreadthTraversal::show(numbersClass* p)
             q.push(LevelNodeClass(node.number->rightChild, node.level + 1));
 
     }
+    writeFile.close();
 }

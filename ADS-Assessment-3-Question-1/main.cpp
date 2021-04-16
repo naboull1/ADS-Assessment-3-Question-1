@@ -21,15 +21,6 @@ void main()
 	ifstream readFile;
 	readFile.open("input-q1a2.txt");
 	readFile >> firstLineVariable;
-	
-
-
-	//Writes the result to a text file
-	ofstream  writeFile;
-	writeFile.open("output-a1q1.txt");
-	writeFile << " ";
-	cout << endl;
-	writeFile.close();
 
 
 	BreadthTraversal textList;
@@ -41,21 +32,6 @@ void main()
 	}
 
 	textList.show(textList.root);
-
-
-
-	//StudentNode* sNodePtr = new StudentNode(123, "asasd");
-	//bst1.insert(new numbersClass(3433, "Jeff"));
-	//bst1.insert(new numbersClass(2222, "Bill"));
-	//bst1.insert(new numbersClass(1221, "Trevor"));
-	//bst1.insert(new numbersClass(4533, "Uncle"));
-	//bst1.insert(new numbersClass(3333, "Adam"));
-	//bst1.insert(new numbersClass(6666, "Bridge"));
-	//bst1.insert(new numbersClass(7777, "Bam"));
-	//bst1.insert(new numbersClass(4343, "Bucket"));
-
-	//bst1.show(bst1.root);
-
 
 
 
