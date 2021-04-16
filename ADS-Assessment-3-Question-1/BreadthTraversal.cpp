@@ -1,28 +1,29 @@
 #include <windows.h>								//Library for controling windows functions
 #include <fstream>									//Library for File System control
-#include "BreadthTraversal.h"
+#include "BreadthTraversal.h"                       //Class which has integar variables 
 
-
-void BreadthTraversal::insert(numbersClass* newStudent)
+// This function inserts a number into a new tree value
+void BreadthTraversal::insert(numbersClass* newNumber)
 {
-    //IF the root is NULL(tree is empty), then make this student the root
+    //IF root has no value end here
     if (root == NULL)
     {
-        root = newStudent;
-        return; //exit function early, we are done here
+        root = newNumber;
+        return;
     }
 
-    //some pointers to help us navigate the tree to find where to put the new student
+    //Pointers for current and parent(previous)
     numbersClass* current = root; //current node we're pointing at
-    numbersClass* parent = NULL; //parent of current (node visitored last time)
+    numbersClass* parent = NULL; //parent of current
 
-    while (true)//infinite loop
+    //While loop that adds numbers to left and right side depnding on value
+    while (true)
     {
         //lets keep track of where we were before moving down further
         parent = current;
         //LEFT OR RIGHT?!
         //if new students studentID is less then the student at current node, then go down LEFT
-        if (newStudent->numberID < current->numberID)
+        if (newNumber->numberID < current->numberID)
         {
             //< means we go down deeper into tree on left side
             current = current->leftChild;
@@ -30,7 +31,7 @@ void BreadthTraversal::insert(numbersClass* newStudent)
             if (current == NULL)
             {
                 //done, stick student here
-                parent->leftChild = newStudent;
+                parent->leftChild = newNumber;
                 return; //done, bail
             }
         }
@@ -41,7 +42,7 @@ void BreadthTraversal::insert(numbersClass* newStudent)
             //if current is NULL, insert there
             if (current == NULL)
             {
-                parent->rightChild = newStudent;
+                parent->rightChild = newNumber;
                 return;
             }
         }
@@ -93,7 +94,6 @@ numbersClass* BreadthTraversal::search(int numberID, bool showSearchPath)
 
 
 
-//referenced second algorithm here https://www.geeksforgeeks.org/level-order-tree-traversal/
 void BreadthTraversal::show(numbersClass* p)
 {
     //Writes the result to a text file

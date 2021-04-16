@@ -3,8 +3,9 @@
 #include "numbersClass.h"
 
 
-//HELPER CLASS FOR OUTPUT
-class LevelNodeClass {
+//CLASS for creating levels to seperate numbers 
+class LevelNodeClass 
+{
 public:
 	numbersClass* number;
 	int level;
@@ -17,7 +18,7 @@ public:
 	}
 };
 
-
+//Class to pass variable data to functions
 class BreadthTraversal
 {
 	public:
@@ -25,7 +26,7 @@ class BreadthTraversal
 		virtual void insert(numbersClass* newNumber);
 		numbersClass* search(int numberID, bool showSearchPath = false);
 
-		//show
+		//performs breadth traversal
 		void show(numbersClass* p);
 };
 

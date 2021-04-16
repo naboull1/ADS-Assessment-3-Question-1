@@ -1,2 +1,6 @@
 ﻿  BreadthTraversal.cpp
+  main.cpp
+G:\Work\GitKraken\ADS-Assessment-3-Question-1\ADS-Assessment-3-Question-1\main.cpp(15,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  numbersClass.cpp
+  Generating Code...
   ADS-Assessment-3-Question-1.vcxproj -> G:\Work\GitKraken\ADS-Assessment-3-Question-1\ADS-Assessment-3-Question-1\Debug\ADS-Assessment-3-Question-1.exe
