@@ -6,7 +6,7 @@
 #include <string>
 #include <windows.h>								//Library for controling windows functions
 #include <fstream>									//Library for File System control
-#include "BreadthTraversal.h"
+#include "BreadthTraversal.h"						//Header file that contains Pointesr and defines variables for breadthTraversal
 
 using namespace std;
 
@@ -22,15 +22,17 @@ void main()
 	readFile.open("input-q1a2.txt");
 	readFile >> firstLineVariable;
 
-
+	//create array
 	BreadthTraversal textList;
 
+	//Cycle through textfile adding numbers to textlist array
 	for (int i = 0; i < firstLineVariable; i++)
 	{
 		readFile >> secondLineVariable;
 		textList.insert(new numbersClass(secondLineVariable));
 	}
 
+	//show text list to console
 	textList.show(textList.root);
 
 

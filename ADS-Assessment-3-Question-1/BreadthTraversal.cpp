@@ -138,5 +138,6 @@ void BreadthTraversal::show(numbersClass* p)
             q.push(LevelNodeClass(node.number->rightChild, node.level + 1));
 
     }
+    //close writing to file
     writeFile.close();
 }

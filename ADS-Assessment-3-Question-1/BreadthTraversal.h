@@ -18,7 +18,10 @@ public:
 	}
 };
 
-//Class to pass variable data to functions
+//Binary Search Tree
+//root node sort of acting as center
+//everything smaller then root, is stored on left branch somewhere
+//everything else to the right
 class BreadthTraversal
 {
 	public:
